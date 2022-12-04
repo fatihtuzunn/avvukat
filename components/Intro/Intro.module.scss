@@ -1,0 +1,50 @@
+#intro {
+    padding: 4rem 0;
+    background: linear-gradient(to right, #c31432, #240b36);
+    color: #fff;
+}
+
+#intro .imgRight {
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-left: auto
+}
+
+.a-panel {
+    white-space: normal !important;
+
+
+}
+
+.rs-panel {
+    min-height: 55px;
+}
+
+
+@media all and (max-width: 768px) {
+    #intro {
+        padding: 6rem 0
+    }
+}
+
+
+
+
+
+#features {
+    padding: 6rem 0 6rem 0
+}
+
+#features .img-left {
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-left: auto
+}
+
+@media all and (max-width: 768px) {
+    #features {
+        padding: 0 0 6rem 0
+    }
+}

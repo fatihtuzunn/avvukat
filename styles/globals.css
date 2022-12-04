@@ -19,8 +19,16 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 999;
 }

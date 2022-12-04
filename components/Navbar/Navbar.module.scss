@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+.NavbarItems {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 80px;
+
+    position: sticky;
+
+    z-index: 999;
+}
+
+.navbarLogo {
+    font-family: 'Megrim', cursive;
+    cursor: pointer;
+
+    text-decoration-line: overline;
+    text-decoration-thickness: 3px;
+}
+
+.navMenu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navLinks {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.navLinks i {
+    padding-right: 10px;
+}
+
+.navLinks:hover {
+    background-color: #fa496e;
+    color: #fff;
+    border-radius: 2px;
+    transition: all 0.2s ease-in;
+}
+
+.navLinksMobile {
+    display: none;
+}
+
+.navMenu button {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.navMenu button:hover {
+    background-color: #151516;
+    color: #fff;
+}
+
+.menuIcons {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .menuIcons {
+        display: block;
+        cursor: pointer;
+    }
+
+    .NavbarItems {
+        z-index: 99;
+        width: 100%;
+        margin: auto;
+    }
+
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        padding: 0;
+        opacity: 0;
+        align-items: stretch;
+        padding: 100px 0 10px 0px;
+        margin: 0;
+    }
+
+    .navMenu.active {
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        border-radius: 13px;
+    }
+
+    .navLinks {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+
+    .navLinks:hover {
+        transition: none;
+    }
+
+    .navMenu button {
+        display: none;
+    }
+
+    .navLinksMobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        margin-top: 10px;
+        background: #fa496e;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}

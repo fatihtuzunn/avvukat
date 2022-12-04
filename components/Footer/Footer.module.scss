@@ -1,0 +1,62 @@
+ .footer {
+     padding: 6rem 0;
+     background: linear-gradient(to right, #c31432, #240b36);
+
+
+
+     h3 {
+         font-size: .85rem;
+         color: #fff;
+         text-transform: uppercase;
+         letter-spacing: 2px
+     }
+
+     ul {
+         list-style: none;
+         padding-left: 0;
+
+         li {
+             margin-bottom: 1.5rem;
+
+             a {
+                 color: #8391a7;
+                 text-decoration: none;
+                 font-size: .85rem;
+                 transition: all .3s ease-in-out;
+
+                 &:hover {
+                     color: #fa496e
+                 }
+             }
+
+
+         }
+
+
+     }
+
+
+
+     ul.social li {
+         display: inline;
+         margin-right: .75rem
+     }
+
+     ul.social li a {
+         color: #fff
+     }
+
+     ul.social li a svg {
+         max-width: 25px
+     }
+
+     ul.social li a:hover {
+         color: #fa496e
+     }
+
+     .logo {
+         max-width: 100px;
+         margin-bottom: .75rem
+     }
+
+ }

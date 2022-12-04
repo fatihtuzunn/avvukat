@@ -1,0 +1,257 @@
+#hero p {
+    margin: 2rem 0 !important;
+    letter-spacing: .25px;
+    font-weight: 300
+}
+
+.kicker {
+    text-transform: uppercase;
+    color: #fa496e;
+    font-weight: 400;
+    font-size: .85rem !important;
+    letter-spacing: 1px;
+    margin-bottom: .75rem;
+    font-family: monospace
+}
+
+#hero {
+    position: relative;
+    color: #fff;
+
+}
+
+
+
+#hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+
+    #hero {
+        padding: 0 0 6rem 0
+    }
+
+
+    #hero .container {
+        font-size: 12px;
+        padding: 5rem 0;
+
+        h1 {
+            font-size: 25px !important;
+            line-height: 24px;
+        }
+    }
+
+    #hero .hero-img {
+        max-width: 65%;
+        margin-top: 1.5rem
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.glitch {
+    background-image: url(../../assets/themis.jpg) !important;
+    background-color: rgba(139, 62, 62);
+    background-size: cover;
+    background-position: top;
+
+
+    height: 130vh;
+    position: relative;
+
+    overflow: hidden;
+    z-index: -999;
+}
+
+.glitch::before,
+.glitch::after,
+.glitch .channel {
+    background: inherit;
+
+    background-attachment: fixed;
+
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+.glitch .channel {
+    mix-blend-mode: screen;
+}
+
+.glitch .channel::before {
+    bottom: 0;
+    content: "";
+    display: block;
+    mix-blend-mode: multiply;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.glitch .r {
+    animation: rgb-shift-r 6s infinite alternate both;
+}
+
+@keyframes rgb-shift-r {
+    0% {
+        transform: translate(-1.0026679061%, 0.4623245634%);
+    }
+
+    12.5% {
+        transform: translate(-1.4469075596%, -0.4681759043%);
+    }
+
+    25% {
+        transform: translate(0.424442143%, -0.4889935768%);
+    }
+
+    37.5% {
+        transform: translate(-0.4252910666%, 0.4796912208%);
+    }
+
+    50% {
+        transform: translate(1.7671143694%, 0.2211744428%);
+    }
+
+    62.5% {
+        transform: translate(-0.6677383841%, 0.3651646602%);
+    }
+
+    75% {
+        transform: translate(-0.0167370013%, 0.3457718469%);
+    }
+
+    87.5% {
+        transform: translate(-1.6088825476%, 0.0525606037%);
+    }
+
+    100%,
+    100% {
+        transform: none;
+    }
+}
+
+.glitch .r::before {
+    background: #f00;
+}
+
+.glitch .g {
+    animation: rgb-shift-g 3s infinite alternate both;
+}
+
+@keyframes rgb-shift-g {
+    0% {
+        transform: translate(-1.6191874781%, -0.2006425999%);
+    }
+
+    12.5% {
+        transform: translate(0.8434752841%, 0.2527936967%);
+    }
+
+    25% {
+        transform: translate(0.1428384714%, 0.3118178278%);
+    }
+
+    37.5% {
+        transform: translate(1.8701494658%, -0.0965529237%);
+    }
+
+    50% {
+        transform: translate(0.2439470876%, -0.2357131636%);
+    }
+
+    62.5% {
+        transform: translate(1.7614041503%, -0.0691381854%);
+    }
+
+    75% {
+        transform: translate(1.6446711863%, 0.4565486256%);
+    }
+
+    87.5% {
+        transform: translate(-1.2466348753%, 0.2272276278%);
+    }
+
+    100%,
+    100% {
+        transform: none;
+    }
+}
+
+.glitch .g::before {
+    background: #0f0;
+}
+
+.glitch .b {
+    animation: rgb-shift-b 3s infinite alternate both;
+}
+
+@keyframes rgb-shift-b {
+    0% {
+        transform: translate(1.5579428978%, 0.4413300333%);
+    }
+
+    12.5% {
+        transform: translate(1.9508490257%, 0.0673732297%);
+    }
+
+    25% {
+        transform: translate(0.5959466915%, -0.2919459332%);
+    }
+
+    37.5% {
+        transform: translate(0.3590407476%, -0.0360149343%);
+    }
+
+    50% {
+        transform: translate(1.1988860006%, -0.3825624416%);
+    }
+
+    62.5% {
+        transform: translate(0.0513960456%, -0.0391199698%);
+    }
+
+    75% {
+        transform: translate(-0.3272771628%, -0.3546154439%);
+    }
+
+    87.5% {
+        transform: translate(-1.3524358733%, -0.4025957488%);
+    }
+
+    100%,
+    100% {
+        transform: none;
+    }
+}
+
+.glitch .b::before {
+    background: #00f;
+}
