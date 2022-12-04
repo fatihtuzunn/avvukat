@@ -151,10 +151,7 @@ function Preview(props) {
           }}
         >
 
-          <div
-
-            id="page"
-          >
+          <div id="page">
 
             <div className={styles.date}> <span className={styles.title}>{state.date}</span></div>
 

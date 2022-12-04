@@ -10,11 +10,12 @@ import {
     Stack,
     Panel,
 } from "rsuite";
-import FormInput from "../../components/Uygulama/FormInput";
+import FormInput from "../../components/Uygulama/Input/FormInput";
 import Preview from "../../components/Uygulama/Preview/Preview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";
+import Link from "next/link";
 
 function Index() {
     const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
@@ -37,18 +38,18 @@ function Index() {
 
                                 <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>Templates</h2>
                                 <Stack wrap spacing={50} justifyContent="center">
-
-                                    <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
-                                        <img src="https://via.placeholder.com/240x240" height="240" />
-                                        <Panel header="RSUITE">
-                                            <p>
-                                                <small>
-                                                    A suite of React components, sensible UI design, and a friendly development experience.
-                                                </small>
-                                            </p>
+                                    <Link href="uygulama/Dilekce">
+                                        <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
+                                            <img src="https://via.placeholder.com/240x240" height="240" />
+                                            <Panel header="RSUITE">
+                                                <p>
+                                                    <small>
+                                                        A suite of React components, sensible UI design, and a friendly development experience.
+                                                    </small>
+                                                </p>
+                                            </Panel>
                                         </Panel>
-                                    </Panel>
-
+                                    </Link>
                                     <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
                                         <img src="https://via.placeholder.com/240x240" height="240" />
                                         <Panel header="RSUITE">
