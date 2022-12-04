@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Col, Form, IconButton, Input, Row, Checkbox, RadioGroup, Radio, DatePicker, Toggle } from "rsuite";
 import { Edit, UserInfo } from "@rsuite/icons";
 import MiscInputs from "./sub-components/MiscInputs";
-import { otherInputs } from "../assets/MiscInputList";
+import { otherInputs } from "../../assets/MiscInputList";
 import { useDispatch, useSelector } from "react-redux";
 import {
   changeMakam,
@@ -16,10 +16,10 @@ import {
   changeText,
   changeDate
 
-} from "../store/dilekceSlice";
+} from "../../store/dilekceSlice";
 import { useMediaQuery } from "react-responsive";
 import ListViewPanel from "./sub-components/ListViewPanel";
-import { data } from "../assets/data";
+import { data } from "../../assets/data";
 import SidebarComponent from "./Sidebar/SidebarComponent";
 function FormInput(props) {
   const [text, setText] = useState("");

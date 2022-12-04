@@ -1,0 +1,190 @@
+.curtain {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition-duration: 500ms;
+}
+
+;
+
+.curtainTitle {
+  font-size: large;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+;
+
+.outerDiv {
+  background: #B5D4FF;
+  height: calc(100vh - 3rem);
+  width: 100%;
+  display: flow-root;
+  border-radius: 5px;
+}
+
+;
+
+
+.page {
+  font-family: "'Times New Roman'; Times; serif" !important;
+  color: black;
+  font-size: 12pt !important;
+  background: #FFFFFF;
+  width: 21cm;
+  height: 29, 7 cm;
+  display: flex;
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+;
+
+
+
+.hide {
+  display: none;
+}
+
+;
+
+.title {
+
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+
+;
+
+.smallText {
+
+
+  padding-top: 0.25rem;
+}
+
+;
+
+
+
+.date {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+;
+
+.makam {
+
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 90%;
+  word-wrap: break-word;
+
+}
+
+;
+
+.name {
+
+  position: absolute;
+  bottom: 35%;
+  right: 20%;
+}
+
+;
+
+
+
+
+.contacts {
+
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  max-width: 12.5rem;
+  word-wrap: break-word;
+  font-weight: 400
+}
+
+;
+
+.profile {
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 75%;
+  overflow-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+;
+
+
+.ekler {
+  position: absolute;
+  top: 85%;
+  left: 15%;
+}
+
+;
+
+.employment {
+  margin-Top: 1rem;
+  display: block;
+  position: relative;
+  height: fit-content;
+}
+
+;
+
+.listFix {
+  margin-Left: 0.3rem;
+}
+
+;
+
+.pushRight {
+  margin-Left: 1rem;
+}
+
+;
+
+.urlHeading {
+  font-size: 12.4px;
+  font-weight: 600;
+}
+
+;
+
+.urlHolder {
+  padding-top: 1.125rem;
+}
+
+;
+
+.urlTitle {
+  font-weight: 500;
+  font-size: 10px;
+  color: #3B67F6;
+}
+
+;

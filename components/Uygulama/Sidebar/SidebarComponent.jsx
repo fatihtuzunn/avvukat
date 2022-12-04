@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sidenav, Nav, Toggle, Dropdown, IconButton } from 'rsuite';
-import { data } from "../../assets/data";
+import { data } from '../../../assets/data';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import PlusIcon from '@rsuite/icons/Plus';
 
@@ -18,7 +18,7 @@ import {
     changeText,
     changeDate
 
-} from "../../store/dilekceSlice";
+} from "../../../store/dilekceSlice";
 
 const renderIconButton = (props, ref) => {
     return (

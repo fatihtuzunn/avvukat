@@ -8,8 +8,8 @@ import {
   Modal,
   Footer,
 } from "rsuite";
-import FormInput from "../../components/FormInput";
-import Preview from "../../components/Preview/Preview";
+import FormInput from "../../components/Uygulama/FormInput";
+import Preview from "../../components/Uygulama/Preview/Preview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";
@@ -22,15 +22,16 @@ function Dilekce() {
       <Container>
         <Content>
           <Grid
-            style={{
-              width: "100%",
-              padding: isBigScreen ? "1rem" : "1rem 0.5rem",
-            }}
+            style={{ width: "100%", padding: isBigScreen ? "1rem" : "1rem 0.5rem", }}
           >
             <Row>
               <Col
                 md={14}
-                style={{ height: "calc(100vh - 3rem)", overflowY: "scroll" }}
+                style={{
+                  height: "calc(100vh - 3rem)",
+                  overflowY: "scroll",
+                  boxShadow: "5px 0px 5px -5px rgba(0,0,0,0.75)"
+                }}
               >
                 <FormInput />
               </Col>

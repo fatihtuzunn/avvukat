@@ -6,7 +6,7 @@ import ModalWindow from "./ModalWindow";
 import DynamicTags from "./DynamicTags";
 import ListViewPanel from "./ListViewPanel";
 import { useSelector, useDispatch } from "react-redux";
-import { changeEditData } from "../../store/dilekceSlice";
+import { changeEditData } from "../../../store/dilekceSlice";
 import { useMediaQuery } from "react-responsive";
 
 function MiscInputs(props) {
@@ -34,23 +34,6 @@ function MiscInputs(props) {
     }
   }, [state]);
 
-  const getDateFormat = (arg) => {
-    var month = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    return month[parseInt(arg.slice(5, 7)) - 1] + " " + arg.slice(0, 4);
-  };
 
   const getTitle = (item) => {
     switch (props.source) {

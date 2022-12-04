@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Form, Input, Row, SelectPicker } from "rsuite";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTemp } from "../../../store/dilekceSlice";
+import { changeTemp } from "../../../../store/dilekceSlice";
 import DatalistInput from "react-datalist-input";
 import "react-datalist-input/dist/styles.css";
 

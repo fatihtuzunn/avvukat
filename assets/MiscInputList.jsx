@@ -1,4 +1,4 @@
-import Links from "../components/sub-components/modal_content/Links";
+import Links from "../components/Uygulama/sub-components/modal_content/Links";
 
 import {
   changeEkler,

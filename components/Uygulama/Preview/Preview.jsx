@@ -1,4 +1,4 @@
-import styles from "./styles";
+import styles from "./Preview.module.scss";
 import { useSelector } from "react-redux";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -98,8 +98,8 @@ function Preview(props) {
 
 
 
-      <div style={isPrinting ? styles.curtain : styles.hide}>
-        <div style={styles.curtainTitle}>
+      <div className={isPrinting ? styles.curtain : styles.hide}>
+        <div className={styles.curtainTitle}>
           <Gear pulse style={{ fontSize: "1.5em", margin: "0.5rem" }} />{" "}
           Preparing your document...
         </div>
@@ -116,8 +116,9 @@ function Preview(props) {
 
       <div
         id="scroll"
+        className={styles.outerDiv}
         style={{
-          ...styles.outerDiv,
+
           height: !isPrinting
             ? isBigScreen
               ? "calc(100vh - 3rem)"
@@ -135,8 +136,9 @@ function Preview(props) {
         */}
         <div
           ref={compRef}
+          className={styles.page}
           style={{
-            ...styles.page,
+
             transform: !isPrinting
               ? isBigScreen
                 ? `scale(${scale})`
@@ -154,12 +156,12 @@ function Preview(props) {
             id="page"
           >
 
-            <div style={styles.date}> <span style={styles.title}>{state.date}</span></div>
+            <div className={styles.date}> <span className={styles.title}>{state.date}</span></div>
 
-            <div style={state.makam.length ? styles.makam : styles.hide}>
+            <div className={state.makam.length ? styles.makam : styles.hide}>
 
-              <p style={{ ...styles.title }}>{state.tc && "T.C"}</p>
-              <p style={{ ...styles.title, margin: "0 !important" }}>{state.makam} <br /> {state.altMakam}</p>
+              <p className={styles.title}>{state.tc && "T.C"}</p>
+              <p className={styles.title}>{state.makam} <br /> {state.altMakam}</p>
             </div>
 
 
@@ -167,22 +169,22 @@ function Preview(props) {
             <div style={{ display: "flex" }}>
 
 
-              <div style={state.name.length ? styles.name : styles.hide}>İsim: <br />{state.name}</div>
+              <div className={state.name.length ? styles.name : styles.hide}>İsim: <br />{state.name}</div>
 
-              <div style={styles.contacts}>
-                <span style={styles.title}>İletişim:</span> <br /> <br />
+              <div className={styles.contacts}>
+                <span className={styles.title}>İletişim:</span> <br /> <br />
                 <span>{state.adress}</span>
                 <br />
                 <span>{state.phone}</span>
-                <span style={state.country.length ? styles.smallText : styles.hide}><b>TC Kimlik No:</b> <br /> {state.country}</span>
+                <span className={state.country.length ? styles.smallText : styles.hide}><b>TC Kimlik No:</b> <br /> {state.country}</span>
               </div>
             </div>
 
 
 
-            <div style={state.text.length ? styles.profile : styles.hide}>
-              <p style={styles.smallText}>{state.text} </p>
-              <p style={styles.smallText}>{state.altust == "alt" ? "Gereğini rica ederim." : "Gereğini arz ederim."} </p>
+            <div className={state.text.length ? styles.profile : styles.hide}>
+              <p className={styles.smallText}>{state.text} </p>
+              <p className={styles.smallText}>{state.altust == "alt" ? "Gereğini rica ederim." : "Gereğini arz ederim."} </p>
             </div>
 
 
@@ -193,9 +195,9 @@ function Preview(props) {
 
             <div style={{ minHeight: "1050px" }}>
 
-              <div style={state.urls.length ? styles.urlHolder : styles.hide}>
+              <div className={state.urls.length ? styles.urlHolder : styles.hide}>
                 <p>
-                  <span style={styles.urlHeading}>URLs</span>
+                  <span className={styles.urlHeading}>URLs</span>
                 </p>
                 {state.urls.map((item, i) => (
                   <div
@@ -207,8 +209,8 @@ function Preview(props) {
                       wordWrap: "break-word",
                     }}
                   >
-                    <span style={styles.urlTitle}>{item.site}: </span>
-                    <span style={styles.smallerText}>
+                    <span className={styles.urlTitle}>{item.site}: </span>
+                    <span className={styles.smallerText}>
                       {item.link}
                     </span>
                     <br />
@@ -216,18 +218,18 @@ function Preview(props) {
                 ))}
               </div>
               <br />
-              <div style={state.ekler.length ? styles.ekler : styles.hide}>
-                <span style={styles.title}>Ekler</span>
+              <div className={state.ekler.length ? styles.ekler : styles.hide}>
+                <span className={styles.title}>Ekler</span>
                 <div style={{ paddingTop: "0.65rem" }}>
                   {state.ekler
                     .slice(0, state.ekler.length - 1)
                     .map((item, i) => (
                       <>
-                        <span style={styles.smallText} key={i}>{item}</span>
+                        <span className={styles.smallText} key={i}>{item}</span>
                         <br />
                       </>
                     ))}
-                  <span style={styles.smallText}>
+                  <span className={styles.smallText}>
                     {state.ekler[state.ekler.length - 1]}
                   </span>
                 </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "rsuite";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTemp } from "../../store/dilekceSlice";
+import { changeTemp } from "../../../store/dilekceSlice";
 
 function ModalWindow(props) {
   const disaptch = useDispatch();
