@@ -6,7 +6,7 @@ import { Button, IconButton } from "rsuite";
 import { useReactToPrint } from "react-to-print";
 import { ArrowLeft, ArrowRight, FileDownload, Gear } from "@rsuite/icons";
 
-function Preview(props) {
+function DavaPreview(props) {
     const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
 
     const compRef = useRef();
@@ -14,7 +14,7 @@ function Preview(props) {
     const [scale, setscale] = useState(window.screen.width / (4 * 650));
     const [isPrinting, setIsPrinting] = useState(false);
 
-    const state = useSelector((state) => state["dilekce"]);
+    const state = useSelector((state) => state["dava"]);
 
 
 
@@ -122,7 +122,21 @@ function Preview(props) {
 
                     <div id="page">
 
-                        sdakndsa
+                        <div className={styles.makam}>
+                            <p className={styles.title}>{state.mahkeme} &nbsp; Hakimliğine</p>
+
+
+                        </div>
+
+                        <div className={styles.kunye}>
+                            {state.davali.isim} {state.davali.tc}{state.davali.adres}
+
+                            <p><span>Davacı:</span>{state.davaci.isim} {state.davaci.tc}{state.davaci.adres}</p><br />
+                            <p><span>Vekili:</span> {state.date}</p><br />
+                            <p><span>Davalı:</span></p><br />
+                            <p><span>Davacı:</span></p>
+
+                        </div>
 
                     </div>
 
@@ -133,4 +147,4 @@ function Preview(props) {
     );
 }
 
-export default Preview;
+export default DavaPreview;

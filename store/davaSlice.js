@@ -3,13 +3,25 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 
-const dilekce = createSlice({
+const dava = createSlice({
     name: "dava",
     initialState: {
         mahkeme: "",
-        davali: "",
-        davaci: "",
-        vekil: "",
+        davali: {
+            isim: "",
+            tc: "",
+            adres: ""
+        },
+        davaci: {
+            isim: "",
+            tc: "",
+            adres: ""
+        },
+        vekil: {
+            isim: "",
+            tc: "",
+            adres: ""
+        },
         evlilikKaydi: {
             il: "",
             ilce: "",
@@ -30,18 +42,30 @@ const dilekce = createSlice({
     },
     reducers: {
 
-        changeAdress(state, action) {
-            state.adress = action.payload;
+        changeMahkeme(state, action) {
+            state.mahkeme = action.payload;
         },
-        changePhone(state, action) {
-            state.phone = action.payload;
+        changeDavali(state, action) {
+            {/* redux ttolkit immer lib */ }
+            state.davali.isim = action.payload.isim;
+            state.davali.tc = action.payload.tc;
+            state.davali.adres = action.payload.adres;
         },
-        changeCountry(state, action) {
-            state.country = action.payload;
+        changeDavaci(state, action) {
+            {/* redux ttolkit immer lib */ }
+            state.davaci.isim = action.payload.isim;
+            state.davaci.tc = action.payload.tc;
+            state.davaci.adres = action.payload.adres;
+        },
+        changeVekil(state, action) {
+            {/* redux ttolkit immer lib */ }
+            state.vekil.isim = action.payload.isim;
+            state.vekil.tc = action.payload.tc;
+            state.vekil.adres = action.payload.adres;
         },
 
-        changeText(state, action) {
-            state.text = action.payload;
+        changeVekil(state, action) {
+            state.vekil = action.payload;
         },
 
         changeDate(state, action) {
@@ -66,19 +90,17 @@ const dilekce = createSlice({
 });
 
 export const {
-    changeMakam,
-    changeAltMakam,
-    changeName,
-    changeAdress,
-    changeTc,
+
+    changeMahkeme,
+    changeDavali,
+    changeDavaci,
+    changeVekil,
     changeDate,
-    changeAltust,
-    changePhone,
     changeCountry,
     changeText,
     changeURL,
     changeEkler,
     changeTemp,
     changeEditData,
-} = dilekce.actions;
-export default dilekce.reducer;
+} = dava.actions;
+export default dava.reducer;

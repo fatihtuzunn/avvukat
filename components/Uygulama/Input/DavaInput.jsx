@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { Col, Form, IconButton, Input, Row, Checkbox, RadioGroup, Radio, DatePicker, Toggle } from "rsuite";
+import React, { useState } from "react";
+import { Col, Form, IconButton, Input, Row, Checkbox, RadioGroup, Radio, DatePicker, Toggle, ButtonToolbar, Button } from "rsuite";
 import { Edit, UserInfo } from "@rsuite/icons";
 import MiscInputs from "../sub-components/MiscInputs";
 import { otherInputs } from "../../../assets/MiscInputList";
 import { useDispatch, useSelector } from "react-redux";
 import {
-    changeMakam,
-    changeAltMakam,
+    changeDavali,
+    changeDavaci,
+    changeMahkeme,
     changeName,
     changeAdress,
     changeAltust,
@@ -16,20 +17,78 @@ import {
     changeText,
     changeDate
 
-} from "../../../store/dilekceSlice";
+} from "../../../store/davaSlice";
 import { useMediaQuery } from "react-responsive";
 import ListViewPanel from "../sub-components/ListViewPanel";
 import { data } from "../../../assets/data";
 import SidebarComponent from "../Sidebar/SidebarComponent";
+
+
+
 function DavaInput(props) {
     const [text, setText] = useState("");
     const [checked, setChecked] = useState(true);
+    const [davaci, setDavaci] = useState({
+        name: "",
+        tc: "",
+        adres: ""
+    });
+    const [davali, setDavali] = useState({
+        name: "",
+        tc: "",
+        adres: ""
+    });
+    const [vekil, setVekil] = useState({
+        name: "",
+        tc: "",
+        adres: ""
+    });
 
+
+    {/* responsive react*/ } const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
     const dispatch = useDispatch();
-
     const state = useSelector(state => state.dilekce)
 
-    const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
+    const handleDavaciChange = (e) => {
+        console.log(e, this)
+        const { name, value } = e.target;
+        setDavaci({ ...davaci, [name]: value });
+    };
+
+    const handleDavaciSubmit = (e) => {
+
+        console.log(davaci)
+        // set data to store on submit
+        dispatch(changeDavaci(davaci));
+
+    };
+
+    const handleDavaliChange = (e) => {
+        console.log(e, this)
+        const { name, value } = e.target;
+        setDavali({ ...davali, [name]: value });
+    };
+
+    const handleDavaliSubmit = (e) => {
+
+        console.log(davali)
+        // set data to store on submit
+        dispatch(changeDavali(davali));
+
+    };
+    const handleVekilChange = (e) => {
+        console.log(e, this)
+        const { name, value } = e.target;
+        setVekil({ ...vekil, [name]: value });
+    };
+
+    const handleVekilSubmit = (e) => {
+
+        console.log(vekil)
+        // set data to store on submit
+        dispatch(changeVekil(vekil));
+
+    };
 
     const styles = {
         title: { fontSize: "large", fontWeight: "600" },
@@ -62,53 +121,106 @@ function DavaInput(props) {
 
     };
 
-    const handleMakamChange = (e) => {
-        /*let wordsMakam = e.split(" ");
-        let makamName = "";
-        if (e.length)
-          wordsMakam.map(word => {
-            makamName += word[0].toUpperCase() + word.slice(1).toLowerCase() + " "
-          }
-          );
-        console.log(makamName)
-        console.log*/
 
-        dispatch(changeMakam(e))
-    };
 
     return (
         <div style={{ padding: isBigScreen ? "2rem" : "1rem" }}>
 
+            {/* Başlık  */}
+            <Row>
+                <Col>
+                    <Form>
+                        <span style={styles.title}>Mahkeme</span>
+                        <br />
+                        <Form.Control onChange={e => dispatch(changeMahkeme(e))} /><br /></Form>
+                </Col>
+                <Col>
+                    <Form>
+                        <span style={styles.title}>Tarih</span>
+                        <br />
+                        <DatePicker format="dd/MM/yyyy" onChange={(date) => {
+                            const dateString = new Date(date).toLocaleDateString("tr-TR")
+                            dispatch(changeDate(dateString))
+                        }} /></Form>
+                </Col>
+            </Row>
 
+            <Row>
+                <Col xs={24} sm={8}>
+                    <Form onSubmit={handleDavaciSubmit} >
+                        <Form.Group controlId="name">
+                            <Form.ControlLabel>Davacı İsim</Form.ControlLabel>
+                            <input class="rs-input" name="name" onChange={handleDavaciChange} />
+                        </Form.Group>
+                        <Form.Group controlId="tc">
+                            <Form.ControlLabel>Davacı TC</Form.ControlLabel>
+                            <input class="rs-input" name="tc" onChange={handleDavaciChange} />
+                        </Form.Group>
+
+                        <Form.Group controlId="textarea">
+                            <Form.ControlLabel>Textarea</Form.ControlLabel>
+                            <textarea class="rs-input" rows={2} name="adres" onChange={handleDavaciChange} />
+                        </Form.Group>
+                        <Form.Group>
+                            <ButtonToolbar>
+                                <Button appearance="primary" type="submit">Submit</Button>
+                                <Button appearance="default">Cancel</Button>
+                            </ButtonToolbar>
+                        </Form.Group>
+                    </Form>
+                </Col>
+                <Col xs={24} sm={8}>
+                    <Form onSubmit={handleDavaliSubmit}>
+                        <Form.Group controlId="name">
+                            <Form.ControlLabel>Davalı İsim</Form.ControlLabel>
+                            <input class="rs-input" name="name" onChange={handleDavaliChange} />
+                        </Form.Group>
+                        <Form.Group controlId="tc">
+                            <Form.ControlLabel>Davalı TC</Form.ControlLabel>
+                            <input class="rs-input" name="tc" onChange={handleDavaliChange} />
+                        </Form.Group>
+
+                        <Form.Group controlId="textarea">
+                            <Form.ControlLabel>Textarea</Form.ControlLabel>
+                            <textarea class="rs-input" rows={2} name="adres" onChange={handleDavaliChange} />
+                        </Form.Group>
+                        <Form.Group>
+                            <ButtonToolbar>
+                                <Button appearance="primary" type="submit">Submit</Button>
+                                <Button appearance="default">Cancel</Button>
+                            </ButtonToolbar>
+                        </Form.Group>
+                    </Form>
+                </Col>
+                <Col xs={24} sm={8}>
+                    <Form onSubmit={handleVekilSubmit}>
+                        <Form.Group controlId="name">
+                            <Form.ControlLabel>Vekil İsim</Form.ControlLabel>
+                            <input class="rs-input" name="name" onChange={handleVekilChange} />
+                        </Form.Group>
+                        <Form.Group controlId="tc">
+                            <Form.ControlLabel>Vekil TC</Form.ControlLabel>
+                            <input class="rs-input" name="tc" onChange={handleVekilChange} />
+                        </Form.Group>
+
+                        <Form.Group controlId="textarea">
+                            <Form.ControlLabel>Textarea</Form.ControlLabel>
+                            <textarea class="rs-input" rows={2} name="adres" onChange={handleVekilChange} />
+                        </Form.Group>
+                        <Form.Group>
+                            <ButtonToolbar>
+                                <Button appearance="primary" type="submit">Submit</Button>
+                                <Button appearance="default">Cancel</Button>
+                            </ButtonToolbar>
+                        </Form.Group>
+                    </Form>
+                </Col>
+            </Row>
             <Form>
 
 
-                {/* Başlık  */}
-                <Form.Group>
-                    <span style={styles.title}>Başlık</span>
-                    <br />
 
-                    <Toggle onChange={handleChange} size="lg" checkedChildren="TC ibaresi" unCheckedChildren="TC ibaresi" />
 
-                    <br />
-                    <Row>
-                        <Form.ControlLabel>Gönderilecek Makam</Form.ControlLabel>
-                        <Input value={state.makam} onChange={handleMakamChange} />
-
-                        <Form.ControlLabel>Alt Makam</Form.ControlLabel>
-                        <Input value={state.altMakam} onChange={(e) => dispatch(changeAltMakam(e))} />
-                    </Row>
-                </Form.Group>
-
-                {/* TARİH  */}
-                <Form.Group>
-                    <span style={styles.title}>Tarih</span>
-                    <br />
-                    <DatePicker format="dd/MM/yyyy" onChange={(date) => {
-                        const dateString = new Date(date).toLocaleDateString("tr-TR")
-                        dispatch(changeDate(dateString))
-                    }} />
-                </Form.Group>
 
                 {/* İletişim bilgileri  */}
                 <Form.Group>
