@@ -214,6 +214,7 @@ function Preview(props) {
                   </div>
                 ))}
               </div>
+
               <br />
               <div className={state.ekler.length ? styles.ekler : styles.hide}>
                 <span className={styles.title}>Ekler</span>
