@@ -29,17 +29,17 @@ function DavaInput(props) {
     const [text, setText] = useState("");
     const [checked, setChecked] = useState(true);
     const [davaci, setDavaci] = useState({
-        name: "",
+        isim: "",
         tc: "",
         adres: ""
     });
     const [davali, setDavali] = useState({
-        name: "",
+        isim: "",
         tc: "",
         adres: ""
     });
     const [vekil, setVekil] = useState({
-        name: "",
+        isim: "",
         tc: "",
         adres: ""
     });
@@ -148,9 +148,9 @@ function DavaInput(props) {
             <Row>
                 <Col xs={24} sm={8}>
                     <Form onSubmit={handleDavaciSubmit} >
-                        <Form.Group controlId="name">
+                        <Form.Group controlId="isim">
                             <Form.ControlLabel>Davacı İsim</Form.ControlLabel>
-                            <input class="rs-input" name="name" onChange={handleDavaciChange} />
+                            <input class="rs-input" name="isim" onChange={handleDavaciChange} />
                         </Form.Group>
                         <Form.Group controlId="tc">
                             <Form.ControlLabel>Davacı TC</Form.ControlLabel>
@@ -171,9 +171,9 @@ function DavaInput(props) {
                 </Col>
                 <Col xs={24} sm={8}>
                     <Form onSubmit={handleDavaliSubmit}>
-                        <Form.Group controlId="name">
+                        <Form.Group controlId="isim">
                             <Form.ControlLabel>Davalı İsim</Form.ControlLabel>
-                            <input class="rs-input" name="name" onChange={handleDavaliChange} />
+                            <input class="rs-input" name="isim" onChange={handleDavaliChange} />
                         </Form.Group>
                         <Form.Group controlId="tc">
                             <Form.ControlLabel>Davalı TC</Form.ControlLabel>
@@ -194,9 +194,9 @@ function DavaInput(props) {
                 </Col>
                 <Col xs={24} sm={8}>
                     <Form onSubmit={handleVekilSubmit}>
-                        <Form.Group controlId="name">
+                        <Form.Group controlId="isim">
                             <Form.ControlLabel>Vekil İsim</Form.ControlLabel>
-                            <input class="rs-input" name="name" onChange={handleVekilChange} />
+                            <input class="rs-input" name="isim" onChange={handleVekilChange} />
                         </Form.Group>
                         <Form.Group controlId="tc">
                             <Form.ControlLabel>Vekil TC</Form.ControlLabel>

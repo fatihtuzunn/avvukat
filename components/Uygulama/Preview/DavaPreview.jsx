@@ -2,7 +2,7 @@ import styles from "./Preview.module.scss";
 import { useSelector } from "react-redux";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Button, IconButton } from "rsuite";
+import { Button, FlexboxGrid, IconButton } from "rsuite";
 import { useReactToPrint } from "react-to-print";
 import { ArrowLeft, ArrowRight, FileDownload, Gear } from "@rsuite/icons";
 
@@ -122,21 +122,62 @@ function DavaPreview(props) {
 
                     <div id="page">
 
-                        <div className={styles.makam}>
+                        <div className={styles.makam} style={{ top: "8%" }}>
                             <p className={styles.title}>{state.mahkeme} &nbsp; Hakimliğine</p>
 
 
                         </div>
+                        <div className={styles.davaDilekcesi}>
 
-                        <div className={styles.kunye}>
-                            {state.davali.isim} {state.davali.tc}{state.davali.adres}
+                            <div className={styles.kunye}>
+                                {state.davali.isim} {state.davali.tc}{state.davali.adres}
+                                <FlexboxGrid className="davaci">
+                                    <p className={styles.title} >Davacı: &nbsp;</p>
+                                    <div>{state.davaci.isim} (TC kimlik no:{state.davaci.tc}) <br /> {state.davaci.adres}</div>
+                                </FlexboxGrid>
 
-                            <p><span>Davacı:</span>{state.davaci.isim} {state.davaci.tc}{state.davaci.adres}</p><br />
-                            <p><span>Vekili:</span> {state.date}</p><br />
-                            <p><span>Davalı:</span></p><br />
-                            <p><span>Davacı:</span></p>
+                                <FlexboxGrid className="vekil">
+                                    <p className={styles.title} >Vekili: &nbsp;</p>
+                                    <div>{state.vekil.isim} (TC kimlik no:{state.vekil.tc}) <br /> {state.vekil.adres}</div>
+                                </FlexboxGrid>
+
+                                <FlexboxGrid className="davali">
+                                    <p className={styles.title} >Davalı: &nbsp;</p>
+                                    <div>{state.davali.isim} (TC kimlik no:{state.davali.tc}) <br /> {state.davali.adres}</div>
+                                </FlexboxGrid>
+
+                                <FlexboxGrid className="konu">
+                                    <p className={styles.title} >Konusu: &nbsp;</p>
+                                    <div>{state.konu} </div>
+                                </FlexboxGrid>
+
+
+                            </div>
+                            <div className={state.urls.length ? styles.urls : styles.hide}>
+                                <p>
+                                    <span className={styles.urlHeading}>Açıklamalar</span>
+                                </p>
+                                {state.urls.map((item, i) => (
+                                    <div
+                                        key={i}
+                                        style={{
+                                            paddingTop: "5px",
+                                            lineHeight: "1",
+                                            maxWidth: "13rem",
+                                            wordWrap: "break-word",
+                                        }}
+                                    >
+                                        <span className={styles.urlTitle}>{item.site}: </span>
+                                        <span className={styles.smallerText}>
+                                            {item.link}
+                                        </span>
+                                        <br />
+                                    </div>
+                                ))}
+                            </div>
 
                         </div>
+
 
                     </div>
 

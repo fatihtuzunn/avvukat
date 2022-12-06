@@ -1,23 +1,25 @@
 import { useState } from "react";
 import { Button, Modal } from "rsuite";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTemp } from "../../../store/dilekceSlice";
+import { changeTemp } from "../../../store/davaSlice";
 
 function ModalWindow(props) {
-  const disaptch = useDispatch();
-  const disabled = useSelector((state) => state["dilekce"].tempData.disabled);
-  const data = useSelector((state) => state["dilekce"].tempData.data);
+  const dispatch = useDispatch();
+  const disabled = useSelector((state) => state["dava"].tempData.disabled);
+  const data = useSelector((state) => state["dava"].tempData.data);
   //const [disabled, setDisabled] = useState(true);
+
   const handleClose = () => {
-    disaptch(changeTemp({ data: undefined, disabled: true }));
+    dispatch(changeTemp({ data: undefined, disabled: true }));
     props.close();
   };
+
   const handleSave = () => {
     props.edit
-      ? /* edit */ disaptch(
+      ? /* edit */ dispatch(
         props.task({ edit: true, index: props.editIndex, data: data })
       )
-      : /* add */ disaptch(props.task(data));
+      : /* add */ dispatch(props.task(data));
     props.close();
   };
   return (

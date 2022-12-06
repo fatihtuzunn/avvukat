@@ -6,7 +6,7 @@ import ModalWindow from "./ModalWindow";
 import DynamicTags from "./DynamicTags";
 import ListViewPanel from "./ListViewPanel";
 import { useSelector, useDispatch } from "react-redux";
-import { changeEditData } from "../../../store/dilekceSlice";
+import { changeEditData } from "../../../store/davaSlice";
 import { useMediaQuery } from "react-responsive";
 
 function MiscInputs(props) {
@@ -16,7 +16,7 @@ function MiscInputs(props) {
     title: { fontSize: "large", fontWeight: "600" },
   };
   const dispatch = useDispatch();
-  const state = useSelector((state) => state["dilekce"]);
+  const state = useSelector((state) => state["dava"]);
   const [list, setList] = useState([]);
   const [edit, setEdit] = useState(false);
   const [editIndex, setEditIndex] = useState(0);

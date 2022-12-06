@@ -187,9 +187,26 @@ function Preview(props) {
 
 
 
+            <div className={state.ekler.length ? styles.ekler : styles.hide}>
+              <span className={styles.title}>Ekler</span>
+              <div style={{ paddingTop: "0.65rem" }}>
+                {state.ekler
+                  .slice(0, state.ekler.length - 1)
+                  .map((item, i) => (
+                    <>
+                      <span className={styles.smallText} key={i}>{item}</span>
+                      <br />
+                    </>
+                  ))}
+                <span className={styles.smallText}>
+                  {state.ekler[state.ekler.length - 1]}
+                </span>
+              </div>
+            </div>
 
 
 
+            {/*
             <div style={{ minHeight: "1050px" }}>
 
               <div className={state.urls.length ? styles.urlHolder : styles.hide}>
@@ -216,32 +233,14 @@ function Preview(props) {
               </div>
 
               <br />
-              <div className={state.ekler.length ? styles.ekler : styles.hide}>
-                <span className={styles.title}>Ekler</span>
-                <div style={{ paddingTop: "0.65rem" }}>
-                  {state.ekler
-                    .slice(0, state.ekler.length - 1)
-                    .map((item, i) => (
-                      <>
-                        <span className={styles.smallText} key={i}>{item}</span>
-                        <br />
-                      </>
-                    ))}
-                  <span className={styles.smallText}>
-                    {state.ekler[state.ekler.length - 1]}
-                  </span>
-                </div>
-              </div>
-
-
-
+              
+             
 
 
 
 
             </div>
-
-
+            */}
 
 
           </div>

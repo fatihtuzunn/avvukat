@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Col, Form, Input, Row, SelectPicker } from "rsuite";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTemp } from "../../../../store/dilekceSlice";
+import { changeTemp } from "../../../../store/davaSlice";
 import DatalistInput from "react-datalist-input";
 import "react-datalist-input/dist/styles.css";
 
 function Links(props) {
-  const editData = useSelector((state) => state["dilekce"].editData);
+  const editData = useSelector((state) => state["dava"].editData);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,7 +25,7 @@ function Links(props) {
   return (
     <Form.Group>
       <Row style={{ width: "99%", height: "6rem" }}>
-        <Col xs={24} sm={12}>
+        <Col xs={24} sm={24}>
           <Form.ControlLabel>Site</Form.ControlLabel>
           <DatalistInput
             placeholder="Site"
@@ -40,13 +40,15 @@ function Links(props) {
             ]}
           />
         </Col>
-        <Col xs={24} sm={12}>
+        <Col xs={24} sm={24}>
           <Form.ControlLabel>Link</Form.ControlLabel>
-          <Input
-            placeholder="https://github.com/sample"
+          <textarea
             value={link}
-            onChange={(e) => setLink(e)}
-          />
+            onChange={(e) => setLink(e.target.value)}
+            className="txt rs-input"
+            rows={10}
+          ></textarea>
+
         </Col>
       </Row>
       <br />

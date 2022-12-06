@@ -1,9 +1,7 @@
 import Links from "../components/Uygulama/sub-components/modal_content/Links";
 
-import {
-  changeEkler,
-  changeURL,
-} from "../store/dilekceSlice";
+import { changeEkler } from "../store/dilekceSlice";
+import { changeURL } from "../store/davaSlice";
 export const otherInputs = [
   {
     title: "Ekler",

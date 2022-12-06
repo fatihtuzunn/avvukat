@@ -30,7 +30,7 @@ const dava = createSlice({
             sayfa: "",
             kutuk: "",
         },
-        cocuk: 0,
+        konu: "",
         text: "",
         date: "",
         tc: false,
@@ -80,6 +80,41 @@ const dava = createSlice({
         },
 
 
+
+
+
+        changeURL(state, action) {
+            if (action.payload.delete) {
+                state.urls.splice(action.payload.data, 1);
+                return;
+            } else if (action.payload.edit) {
+                var words = action.payload.data.site.split(" "); // title case conversion
+                var name = "";
+                if (action.payload.data.site.length)
+                    words.map(
+                        (word) =>
+                        (name +=
+                            word[0].toUpperCase() + word.slice(1).toLowerCase() + " ")
+                    );
+                var temp = { ...action.payload.data };
+                temp.site = name;
+
+                state.urls[action.payload.index] = temp;
+                return;
+            }
+
+            var words = action.payload.site.split(" "); // title case conversion
+            var name = "";
+            if (action.payload.site)
+                words.map(
+                    (word) =>
+                        (name += word[0].toUpperCase() + word.slice(1).toLowerCase() + " ")
+                );
+            var temp = { ...action.payload };
+            temp.site = name;
+
+            state.urls.push(temp);
+        },
         changeTemp(state, action) {
             state.tempData = action.payload;
         },
