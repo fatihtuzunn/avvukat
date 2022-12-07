@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
-
 .NavbarItems {
     background-color: #fff;
     display: flex;
@@ -15,13 +13,7 @@
     z-index: 999;
 }
 
-.navbarLogo {
-    font-family: 'Megrim', cursive;
-    cursor: pointer;
 
-    text-decoration-line: overline;
-    text-decoration-thickness: 3px;
-}
 
 .navMenu {
     display: grid;

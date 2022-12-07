@@ -2,6 +2,9 @@
     padding: 4rem 0;
     background: linear-gradient(to right, #c31432, #240b36);
     color: #fff;
+    width: 85%;
+    margin: auto;
+    border-radius: 20%;
 }
 
 #intro .imgRight {
@@ -33,10 +36,11 @@
 
 
 #features {
-    padding: 6rem 0 6rem 0
+    padding: 6rem 0;
+
 }
 
-#features .img-left {
+#features .imgLeft {
     width: 100%;
     display: block;
     max-width: 500px;

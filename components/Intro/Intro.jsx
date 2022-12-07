@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <>
             <section id={styles.intro}>
-                <Container className={styles.container}>
+                <Container >
                     <Grid>
                         <Row className={styles.row}>
                             <Col xs={24} sm={24} md={12}>
@@ -50,23 +50,24 @@ const Intro = () => {
             </section>
 
             <section id={styles.features}>
-                <Container className={styles.container}>
-                    <Row >
+                <Container >
+                    <Grid>
+                        <Row  >
 
 
-                        <Col xs={24} sm={24} md={12}>
-                            <img src="https://assets.codepen.io/772926/section-img-02.png" class="img-left" alt="" />
-                        </Col>
+                            <Col xs={24} sm={24} md={12}>
+                                <img src="https://assets.codepen.io/772926/section-img-02.png" className={styles.imgLeft} alt="" />
+                            </Col>
 
-                        <Col xs={24} sm={24} md={12}>
-                            <p class="kicker">Fully Intergrated</p>
-                            <h2>Work with tools you <br />already use.</h2>
+                            <Col xs={24} sm={24} md={12}>
+                                <p className={styles.kicker}>Fully Intergrated</p>
+                                <h2>Work with tools you <br />already use.</h2>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                        </Col>
-                    </Row>
-
+                            </Col>
+                        </Row>
+                    </Grid>
                 </Container>
             </section>
         </>

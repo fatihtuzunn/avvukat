@@ -8,15 +8,16 @@ import Navigation from "../components/Navbar/Navigation";
 
 function Home() {
   return (
-    <Container>
+    <Container >
       <Navigation />
       <Header><Hero /></Header>
       <Content>
+
         <Cards />
         <Intro />
       </Content>
 
-
+      <FooterComponent />
     </Container>
   )
 }

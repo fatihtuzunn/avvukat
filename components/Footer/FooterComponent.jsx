@@ -6,7 +6,7 @@ import styles from "./Footer.module.scss"
 const FooterComponent = () => {
     return (
 
-        <Footer className='footer'>
+        <Footer className={styles.footer}>
             <div class="container">
                 <Grid>
                     <Row>

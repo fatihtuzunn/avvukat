@@ -6,6 +6,7 @@ import CogIcon from '@rsuite/icons/legacy/Cog';
 import { Component } from "react";
 import styles from "./Navbar.module.scss";
 import { MenuItems } from "../../assets/MenuItems"
+import Logo from '../Logo/Logo';
 
 class Navigation extends Component {
     state = {
@@ -20,7 +21,7 @@ class Navigation extends Component {
     render() {
         return (
             <nav className={styles.NavbarItems}>
-                <div className={styles.navbarLogo}> <h1>Avvukat</h1> </div>
+                <Logo />
                 <div className={styles.menuIcons} onClick={this.handleClick}>
                     <i>{this.state.clicked ? "Open" : "Close"}</i>
                 </div>
