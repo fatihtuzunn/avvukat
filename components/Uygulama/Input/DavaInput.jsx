@@ -128,13 +128,13 @@ function DavaInput(props) {
 
             {/* Başlık  */}
             <Row>
-                <Col>
-                    <Form>
+                <Col xs={24} sm={9}>
+                    <Form fluid>
                         <span style={styles.title}>Mahkeme</span>
                         <br />
                         <Form.Control onChange={e => dispatch(changeMahkeme(e))} /><br /></Form>
                 </Col>
-                <Col>
+                <Col xs={24} sm={5}>
                     <Form>
                         <span style={styles.title}>Tarih</span>
                         <br />
@@ -142,6 +142,12 @@ function DavaInput(props) {
                             const dateString = new Date(date).toLocaleDateString("tr-TR")
                             dispatch(changeDate(dateString))
                         }} /></Form>
+                </Col>
+                <Col xs={24} sm={10}>
+                    <Form fluid>
+                        <span style={styles.title}>Konu</span>
+                        <br />
+                        <Form.Control onChange={e => dispatch(changeMahkeme(e))} /><br /></Form>
                 </Col>
             </Row>
 

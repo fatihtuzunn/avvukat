@@ -122,11 +122,16 @@ function DavaPreview(props) {
 
                     <div id="page">
 
-                        <div className={styles.makam} style={{ top: "8%" }}>
+                        <div style={{ top: "3.5cm", left: "3.5cm", position: "absolute" }} >dssda</div>
+                        <div className={styles.makam} style={{ top: "3.5cm" }}>
                             <p className={styles.title}>{state.mahkeme} &nbsp; Hakimliğine</p>
 
 
                         </div>
+
+                        <div className={styles.date} style={{ margin: "50px 50px 0 0" }}> <span className={styles.title}>{state.date}</span></div>
+
+
                         <div className={styles.davaDilekcesi}>
 
                             <div className={styles.kunye}>
@@ -155,7 +160,7 @@ function DavaPreview(props) {
                             </div>
                             <div className={state.urls.length ? styles.urls : styles.hide}>
                                 <p>
-                                    <span className={styles.urlHeading}>Açıklamalar</span>
+                                    <span className={styles.title}>Açıklamalar</span>
                                 </p>
                                 {state.urls.map((item, i) => (
                                     <div
@@ -167,7 +172,7 @@ function DavaPreview(props) {
                                             wordWrap: "break-word",
                                         }}
                                     >
-                                        <span className={styles.urlTitle}>{item.site}: </span>
+                                        <span className={styles.title}>{i + 1}. </span>
                                         <span className={styles.smallerText}>
                                             {item.link}
                                         </span>

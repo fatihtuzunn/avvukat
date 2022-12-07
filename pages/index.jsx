@@ -9,6 +9,7 @@ import Navigation from "../components/Navbar/Navigation";
 function Home() {
   return (
     <Container>
+      <Navigation />
       <Header><Hero /></Header>
       <Content>
         <Cards />

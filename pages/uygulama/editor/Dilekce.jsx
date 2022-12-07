@@ -8,8 +8,8 @@ import {
   Modal,
   Footer,
 } from "rsuite";
-import FormInput from "../../components/Uygulama/Input/FormInput";
-import Preview from "../../components/Uygulama/Preview/Preview";
+import FormInput from "../../../components/Uygulama/Input/FormInput";
+import Preview from "../../../components/Uygulama/Preview/Preview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";

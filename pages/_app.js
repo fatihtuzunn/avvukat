@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
-      <Navigation />
+
       <Component {...pageProps} />
     </Provider>)
 }

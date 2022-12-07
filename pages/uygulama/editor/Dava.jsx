@@ -1,3 +1,4 @@
+import React from "react";
 import {
     Col,
     Container,
@@ -8,17 +9,29 @@ import {
     Modal,
     Footer,
 } from "rsuite";
-import DavaInput from "../../components/Uygulama/Input/DavaInput";
-import DavaPreview from "../../components/Uygulama/Preview/DavaPreview";
+import DavaInput from "../../../components/Uygulama/Input/DavaInput";
+import DavaPreview from "../../../components/Uygulama/Preview/DavaPreview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";
 
-function Dilekce() {
+
+function Dava() {
     const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
     const [modalOpen, setModalOpen] = useState(false);
+
+
     return (
         <div className="dilekce">
+
+
+
+
+
+
+
+
+
             <Container>
                 <Content>
                     <Grid

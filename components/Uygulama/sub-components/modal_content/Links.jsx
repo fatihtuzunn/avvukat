@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Col, Form, Input, Row, SelectPicker } from "rsuite";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTemp } from "../../../../store/davaSlice";
-import DatalistInput from "react-datalist-input";
 import "react-datalist-input/dist/styles.css";
 
 function Links(props) {
@@ -27,17 +26,12 @@ function Links(props) {
       <Row style={{ width: "99%", height: "6rem" }}>
         <Col xs={24} sm={24}>
           <Form.ControlLabel>Site</Form.ControlLabel>
-          <DatalistInput
+          <Form.Control
             placeholder="Site"
             value={site}
             style={{ marginTop: "0.5rem" }}
-            onSelect={(item) => setSite(item.value)}
-            onChange={(item) => setSite(item.target.value)}
-            items={[
-              { id: "Github", value: "Github" },
-              { id: "LinkedIn", value: "LinkedIn" },
-              { id: "Website", value: "Website" },
-            ]}
+            onChange={(item) => setSite(item)}
+
           />
         </Col>
         <Col xs={24} sm={24}>
