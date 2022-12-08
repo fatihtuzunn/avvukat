@@ -11,7 +11,7 @@ const Intro = () => {
                     <Grid>
                         <Row className={styles.row}>
                             <Col xs={24} sm={24} md={12}>
-                                <p className={styles.kicker}>Let's Connect</p>
+                                <p className={styles.kicker}>Let&apos;s Connect</p>
                                 <h2>Getting you connected <br />to your audience.</h2>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -57,7 +57,7 @@ const Intro = () => {
 
 
                             <Col xs={24} sm={24} md={12}>
-                                <img src="https://assets.codepen.io/772926/section-img-02.png" className={styles.imgLeft} alt="" />
+                                <Image src="https://assets.codepen.io/772926/section-img-02.png" className={styles.imgLeft} alt="Intro image" />
                             </Col>
 
                             <Col xs={24} sm={24} md={12}>

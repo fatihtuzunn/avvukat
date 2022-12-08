@@ -32,7 +32,7 @@ function MiscInputs(props) {
         setList([null]);
         break;
     }
-  }, [state]);
+  }, [state, props.source]);
 
 
   const getTitle = (item) => {

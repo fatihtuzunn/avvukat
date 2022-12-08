@@ -27,7 +27,7 @@ const MirasDavasi = () => {
                         <br />
                         <Form.Group >
                             <Form.ControlLabel>Miras Bırakan Kişinin Yerleşim Yeri</Form.ControlLabel>
-                            <Form.HelpText>TMK Madde 576 - "Miras, malvarlığının tamamı için mirasbırakanın yerleşim yerinde açılır. Mirasbırakanın tasarruflarının iptali veya tenkisi, mirasın paylaştırılması ve miras sebebiyle istihkak davaları bu yerleşim yeri mahkemesinde görülür."</Form.HelpText>
+                            <Form.HelpText>TMK Madde 576 - &quot;Miras, malvarlığının tamamı için mirasbırakanın yerleşim yerinde açılır. Mirasbırakanın tasarruflarının iptali veya tenkisi, mirasın paylaştırılması ve miras sebebiyle istihkak davaları bu yerleşim yeri mahkemesinde görülür.&quot;</Form.HelpText>
                             <br />
                             <SelectPicker onChange={setOlen} data={sehirler.map(item => ({ label: item.name, value: item.name }))} style={{ width: 224 }} />
 
@@ -47,7 +47,7 @@ const MirasDavasi = () => {
                         {kira ?
                             <>
                                 <p>Sulh Hukuk Mahkemesi</p>
-                                <Form.HelpText>HMK 383 "Çekişmesiz yargı işlerinde görevli mahkeme, aksine bir düzenleme bulunmadığı sürece sulh hukuk mahkemesidir."</Form.HelpText>
+                                <Form.HelpText>HMK 383 &quot;Çekişmesiz yargı işlerinde görevli mahkeme, aksine bir düzenleme bulunmadığı sürece sulh hukuk mahkemesidir.&quot;</Form.HelpText>
 
                             </> : "Asliye Hukuk Mahkemesi"}
                     </Col>

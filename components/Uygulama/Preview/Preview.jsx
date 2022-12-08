@@ -16,39 +16,6 @@ function Preview(props) {
 
   const state = useSelector((state) => state["dilekce"]);
 
-  useEffect(() => {
-
-    /*
-        var wordsMakam = state.makam.split(" ");
-        var size = 2.5;
-        if (state.makam.length <= 40 && state.makam.length > 20) {
-          size = 2;
-        } else {
-          //console.log(false);
-          wordsMakam.forEach((word) => {
-            if (word.length * 0.75 > size) size = word.length * 0.85;
-          });
-          if (size > 10) { size = 4; }
-        }
-    
-        if (state.makam.length < 80 && state.makam.length > 40) {
-          size = 1.8;
-        }
-        setFontSize(`${size}rem`);*/
-
-
-  }, [
-    window.screen.width,
-    state.makam,
-    state.altMakam,
-    state.name,
-    state.adress,
-    state.tc,
-    state.altust,
-    state.text,
-    state.date,
-  ]);
-
 
 
 
