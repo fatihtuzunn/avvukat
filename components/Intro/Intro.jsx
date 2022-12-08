@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { Col, Container, Grid, Panel, PanelGroup, Row } from 'rsuite';
 import styles from "./Intro.module.scss"
@@ -42,7 +43,7 @@ const Intro = () => {
                             </Col>
 
                             <Col xs={24} sm={24} md={12}>
-                                <img src="https://assets.codepen.io/772926/section-img-01.png" className={styles.imgRight} alt="" />
+                                <Image src="https://assets.codepen.io/772926/section-img-01.png" className={styles.imgRight} alt="" />
                             </Col>
                         </Row>
                     </Grid>

@@ -122,7 +122,6 @@ function DavaPreview(props) {
 
                     <div id="page">
 
-                        <div style={{ top: "3.5cm", left: "3.5cm", position: "absolute" }} >dssda</div>
                         <div className={styles.makam} style={{ top: "3.5cm" }}>
                             <p className={styles.title}>{state.mahkeme} &nbsp; Hakimliğine</p>
 
@@ -158,7 +157,7 @@ function DavaPreview(props) {
 
 
                             </div>
-                            <div className={state.urls.length ? styles.urls : styles.hide}>
+                            <div className={state.urls.length ? styles.aciklamalar : styles.hide}>
                                 <p>
                                     <span className={styles.title}>Açıklamalar</span>
                                 </p>
@@ -168,7 +167,7 @@ function DavaPreview(props) {
                                         style={{
                                             paddingTop: "5px",
                                             lineHeight: "1",
-                                            maxWidth: "13rem",
+
                                             wordWrap: "break-word",
                                         }}
                                     >

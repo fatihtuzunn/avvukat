@@ -153,7 +153,6 @@ function Preview(props) {
 
           <div id="page">
 
-            <div style={{ top: "3.5cm", left: "3.5cm", position: "absolute" }} >dssda</div>
 
 
             <div className={styles.date}> <span className={styles.title}>{state.date}</span></div>

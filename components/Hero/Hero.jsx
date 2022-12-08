@@ -18,7 +18,7 @@ const Hero = () => {
 
                         <h5>Hızlı ve zahmetsizce hukuki belgelerinizi oluşturun, zamandan ve kaynaklardan tasarruf edin. </h5>
                         <br />
-                        <IconButton size='lg' appearance="primary" color="blue" icon={<PageEndIcon />}>
+                        <IconButton size='md' appearance="primary" color="blue" icon={<PageEndIcon />} href="/uygulama/editor">
                             Şimdi ücretsiz dene
                         </IconButton>
                     </Col>

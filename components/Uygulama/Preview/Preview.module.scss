@@ -163,14 +163,15 @@
 
 .davaDilekcesi {
 
-  margin: 150px 50px 0 100px;
+  position: absolute;
+  top: 3.5cm;
+  left: 3.5cm;
+  right: 2.5cm;
 
 }
 
 .kunye {
-  position: absolute;
-  top: 20%;
-  left: 3.5cm;
+  margin: 100px 0 5px 0;
 }
 
 .urlHeading {
@@ -181,7 +182,8 @@
 ;
 
 .aciklamalar {
-  padding-top: 1.125rem;
+  padding-top: 0.25rem;
+
 }
 
 ;

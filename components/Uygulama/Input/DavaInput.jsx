@@ -15,13 +15,15 @@ import {
     changeCountry,
     changePhone,
     changeText,
-    changeDate
+    changeDate,
+    changeURL
 
 } from "../../../store/davaSlice";
 import { useMediaQuery } from "react-responsive";
 import ListViewPanel from "../sub-components/ListViewPanel";
 import { data } from "../../../assets/data";
 import SidebarComponent from "../Sidebar/SidebarComponent";
+import Links from "../sub-components/modal_content/Links";
 
 
 
@@ -223,9 +225,17 @@ function DavaInput(props) {
                 </Col>
             </Row>
             <Form>
+                <br /><br />
 
-
-
+                <MiscInputs
+                    key="aaa"
+                    title="Açıklamalar"
+                    desc="Dava Açıklamaları"
+                    buttonText="Gir"
+                    modal={<Links />}
+                    source="links"
+                    task={changeURL}
+                />
 
 
                 {/* İletişim bilgileri  */}

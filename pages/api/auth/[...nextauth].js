@@ -11,4 +11,4 @@ export const authOptions = {
     ],
 };
 
-export default NextAuth(auth)
+export default NextAuth(authOptions)

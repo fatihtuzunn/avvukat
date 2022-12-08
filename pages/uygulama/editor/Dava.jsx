@@ -93,4 +93,4 @@ function Dava() {
     );
 }
 
-export default Dilekce;
+export default Dava;

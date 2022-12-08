@@ -37,7 +37,7 @@ function Index() {
 
             <div style={{ width: 240, position: "absolute", zIndex: 999, left: "-40px", top: "20%" }}>
 
-                <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']}>
+                <Sidenav expanded={false} defaultOpenKeys={['3', '4']}>
                     <Sidenav.Body>
                         <Nav activeKey={activeKey} onSelect={setActiveKey}>
                             <Nav.Item eventKey="1" icon={<DashboardIcon />}>
@@ -94,7 +94,7 @@ function Index() {
                                     <Link href="editor/Dilekce">
                                         <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
                                             <img src="https://via.placeholder.com/240x240" height="240" />
-                                            <Panel header="RSUITE">
+                                            <Panel header="Basit Dilekçe">
                                                 <p>
                                                     <small>
                                                         A suite of React components, sensible UI design, and a friendly development experience.
@@ -103,36 +103,18 @@ function Index() {
                                             </Panel>
                                         </Panel>
                                     </Link>
-                                    <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
-                                        <img src="https://via.placeholder.com/240x240" height="240" />
-                                        <Panel header="RSUITE">
-                                            <p>
-                                                <small>
-                                                    A suite of React components, sensible UI design, and a friendly development experience.
-                                                </small>
-                                            </p>
+                                    <Link href="editor/Dava">
+                                        <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
+                                            <img src="https://via.placeholder.com/240x240" height="240" />
+                                            <Panel header="Dava Dilekçesi">
+                                                <p>
+                                                    <small>
+                                                        A suite of React components, sensible UI design, and a friendly development experience.
+                                                    </small>
+                                                </p>
+                                            </Panel>
                                         </Panel>
-                                    </Panel>
-                                    <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
-                                        <img src="https://via.placeholder.com/240x240" height="240" />
-                                        <Panel header="RSUITE">
-                                            <p>
-                                                <small>
-                                                    A suite of React components, sensible UI design, and a friendly development experience.
-                                                </small>
-                                            </p>
-                                        </Panel>
-                                    </Panel>
-                                    <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 240 }}>
-                                        <img src="https://via.placeholder.com/240x240" height="240" />
-                                        <Panel header="RSUITE">
-                                            <p>
-                                                <small>
-                                                    A suite of React components, sensible UI design, and a friendly development experience.
-                                                </small>
-                                            </p>
-                                        </Panel>
-                                    </Panel>
+                                    </Link>
                                 </Stack>
 
                             </Col>
