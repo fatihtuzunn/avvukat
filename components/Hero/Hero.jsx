@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Col, Container, Grid, Row } from 'rsuite';
+import { Button, Col, Container, Grid, IconButton, Row } from 'rsuite';
+import PageEndIcon from '@rsuite/icons/PageEnd';
 import Logo from '../Logo/Logo';
 import styles from "./Hero.module.scss"
 const Hero = () => {
@@ -17,8 +18,9 @@ const Hero = () => {
 
                         <h5>Hızlı ve zahmetsizce hukuki belgelerinizi oluşturun, zamandan ve kaynaklardan tasarruf edin. </h5>
                         <br />
-                        <Button href="#" appearance="primary"><i class="fa-solid fa-download" target="_blank"></i> &nbsp;Download</Button>
-                        <Button href="#" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-github"></i> &nbsp;View on GitHub</Button>
+                        <IconButton size='lg' appearance="primary" color="blue" icon={<PageEndIcon />}>
+                            Şimdi ücretsiz dene
+                        </IconButton>
                     </Col>
 
                     <Col xs={24} sm={24} md={12}>
