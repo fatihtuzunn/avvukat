@@ -13,7 +13,7 @@ const Hero = () => {
             <Grid style={{ marginTop: "50px" }}>
                 <Row class="row">
                     <Col xs={24} sm={24} md={12} className={styles.leftCol}>
-                        <p class={styles.kicker}>Kullanışlı hukuk teknolojileri</p>
+                        <p className="kicker">Kullanışlı hukuk teknolojileri</p>
                         <Logo margin={isTabletOrMobile ? "0" : "15px 0 10px 35px"} />
                         <h1 class={styles.jumbo}>Hukuki belge otomasyonu.</h1>
 

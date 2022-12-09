@@ -33,3 +33,17 @@ a {
   top: 30%;
   z-index: 999;
 }
+
+.kicker {
+  text-transform: uppercase;
+  color: #fa496e;
+  font-weight: 400;
+  font-size: .85rem !important;
+  letter-spacing: 1px;
+  margin-bottom: .75rem;
+  font-family: monospace
+}
+
+.text-center {
+  text-align: center;
+}

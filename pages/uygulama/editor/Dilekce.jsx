@@ -13,12 +13,16 @@ import Preview from "../../../components/Uygulama/Preview/Preview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";
+import SidenavComp from "../../../components/Uygulama/Sidenav/SidenavComp";
 
 function Dilekce() {
   const isBigScreen = useMediaQuery({ query: "(min-width: 992px)" });
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="dilekce">
+
+      <SidenavComp />
+
       <Container>
         <Content>
           <Grid

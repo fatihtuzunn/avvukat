@@ -14,6 +14,7 @@ import DavaPreview from "../../../components/Uygulama/Preview/DavaPreview";
 import { useMediaQuery } from "react-responsive";
 import { Image } from "@rsuite/icons";
 import { useState } from "react";
+import SidenavComp from "../../../components/Uygulama/Sidenav/SidenavComp";
 
 
 function Dava() {
@@ -26,7 +27,7 @@ function Dava() {
 
 
 
-
+            <SidenavComp />
 
 
 
