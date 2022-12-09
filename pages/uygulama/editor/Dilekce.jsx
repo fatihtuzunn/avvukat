@@ -55,7 +55,7 @@ function Dilekce() {
               top: "calc(100vh - 6rem)",
               left: "calc(100vw - 4.5rem)",
             }}
-            icon={<Image />}
+            icon={<img />}
             circle
             size="lg"
             appearance="primary"

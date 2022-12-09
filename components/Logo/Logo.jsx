@@ -7,13 +7,14 @@ const Logo = (props) => {
         width: props.width,
         height: props.height,
         textAlign: props.textAlign,
-        margin: props.margin
+        margin: props.margin,
+        fontSize: props.fontSize
     }
     return (
 
         <>
             <div style={{ margin: size.margin }} className={styles.logo}>
-                <h1 style={{ textAlign: size.textAlign }}>Avvukat</h1>
+                <h1 style={{ fontSize: size.fontSize, textAlign: size.textAlign }}>Avvukat</h1>
             </div>
         </>
     );

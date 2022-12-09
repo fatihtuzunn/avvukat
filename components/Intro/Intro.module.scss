@@ -27,6 +27,8 @@
 
 @media all and (max-width: 768px) {
     #intro {
+        border-radius: 0;
+        width: 100%;
         padding: 6rem 0
     }
 }

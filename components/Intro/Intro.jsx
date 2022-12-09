@@ -43,7 +43,7 @@ const Intro = () => {
                             </Col>
 
                             <Col xs={24} sm={24} md={12}>
-                                <Image src="https://assets.codepen.io/772926/section-img-01.png" className={styles.imgRight} alt="" />
+                                <img src="https://assets.codepen.io/772926/section-img-01.png" className={styles.imgRight} alt="" />
                             </Col>
                         </Row>
                     </Grid>
@@ -57,7 +57,7 @@ const Intro = () => {
 
 
                             <Col xs={24} sm={24} md={12}>
-                                <Image src="https://assets.codepen.io/772926/section-img-02.png" className={styles.imgLeft} alt="Intro image" />
+                                <img src="https://assets.codepen.io/772926/section-img-02.png" className={styles.imgLeft} alt="Intro image" />
                             </Col>
 
                             <Col xs={24} sm={24} md={12}>

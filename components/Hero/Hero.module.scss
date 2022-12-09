@@ -9,10 +9,28 @@
 }
 
 
-.leftCol a {
-    padding: 20px 20%;
-    font-size: 30px;
+.leftCol {
+
+    p {
+        color: #0b0b0b;
+        width: 80%;
+        font-weight: 300;
+        margin: 5px 0 20px 0;
+    }
+
+    a {
+        width: 80%;
+        height: 50px;
+        padding: 13px !important;
+        font-size: 20px !important;
+
+        svg {
+            width: 50px !important;
+            height: 50px !important;
+        }
+    }
 }
+
 
 
 
@@ -46,6 +64,11 @@
 
     .leftCol {
         text-align: center;
+
+        p {
+            text-align: center;
+            margin: auto;
+        }
     }
 
 
