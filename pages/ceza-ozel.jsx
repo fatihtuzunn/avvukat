@@ -156,7 +156,7 @@ const CezaOzel = () => {
             isnadiyet: ""
 
         },
-        maneviUnsur: ".",
+        maneviUnsur: "",
         nitelikliUnsur: ""
         ,
         ozelGorunus: {
