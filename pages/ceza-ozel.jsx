@@ -32,7 +32,7 @@ const sucDB = {
             isnadiyet: (<p>Bir hareketin suçun konusu bakımından izin verilen riski aşan bir tehlike doğurması ve bu tehlikenin tipe uygun netice olarak gerçekleşmesi halinde netice, objektif olarak faile isnad edilir.
                 <br />
                 Belirli durumlarda ise objektif isnadiyet ortadan kalkar. <br />
-                Bu haller; tehlikenin hukuken önem taşımayacak ölçüde artırıldığı haller, risk azaltıcı haller, izin verilen risk halleri, tehlikenin netice olarak gerçekleşmediği haller, normun koruma alanına girmeyen haller ve hukuka uygun alternatif davranışlardır."
+                Bu haller; tehlikenin hukuken önem taşımayacak ölçüde artırıldığı haller, risk azaltıcı haller, izin verilen risk halleri, tehlikenin netice olarak gerçekleşmediği haller, normun koruma alanına girmeyen haller ve hukuka uygun alternatif davranışlardır.
             </p>)
         },
         maneviUnsur: "Kasten öldürme suçunun manevi unsuru, isminden de anlaşılacağı üzere kasttır.",
