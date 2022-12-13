@@ -47,3 +47,24 @@ a {
 .text-center {
   text-align: center;
 }
+
+.cezaOzel .tablo h1,
+.cezaOzel .tablo h3,
+.cezaOzel .tablo h5 {
+  text-align: center;
+}
+
+.cezaOzel .tablo {
+  width: 90%;
+  margin: auto;
+  border: 20px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width:768px) {
+  .cezaOzel .tablo {
+    width: 100%;
+    border: 10px solid;
+  }
+}
